@@ -48,7 +48,7 @@ function Slider() {
             key={item.id}
             src={Image_Base_Url + item.backdrop_path}
             alt="Trending Movies"
-            className="min-w-full md:h-[310px] object-cover object-left-top mr-5 rounded-md hover:border-[4px] hover:border-gray-400 transition-all duration-100"
+            className="min-w-full md:h-[310px] object-cover object-left-top mr-5 rounded-md hover:border-[4px] hover:border-gray-400 transition-all duration-100 ease-in"
           />
         ))}
       </div>
