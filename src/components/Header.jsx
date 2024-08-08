@@ -1,10 +1,14 @@
 import { HiDotsVertical, HiHome, HiPlus, HiStar } from "react-icons/hi";
 import logo from "../assets/images/DisneyLogo.png";
-import { HiMagnifyingGlass, HiPlayCircle, HiTv } from "react-icons/hi2";
+import { HiMagnifyingGlass, HiTv } from "react-icons/hi2";
 import HeaderItems from "./HeaderItems";
 import Profile from "../assets/images/profile2.png";
+import { BiCameraMovie } from "react-icons/bi";
+import { useState } from "react";
 
 function Header() {
+  const [toggle, setToggle] = useState(false);
+
   const menu = [
     {
       name: "HOME",
@@ -24,7 +28,7 @@ function Header() {
     },
     {
       name: "MOVIES",
-      icon: HiPlayCircle,
+      icon: BiCameraMovie,
     },
     {
       name: "SERIES",
@@ -45,19 +49,32 @@ function Header() {
             <HeaderItems key={item.name} name={item.name} Icon={item.icon} />
           ))}
         </div>
-        <div className="md:hidden flex gap-8">
+        <div className="md:hidden flex gap-5">
           {menu.map(
             (item, index) =>
               index < 3 && (
-                <HeaderItems
-                  key={item.name}
-                  name={item.name}
-                  Icon={item.icon}
-                />
+                <HeaderItems key={item.name} name={""} Icon={item.icon} />
               )
           )}
-          <div className="md:hidden">
-            <HeaderItems name="" Icon={HiDotsVertical} />
+          <div
+            className="md:hidden cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          >
+            <HeaderItems name={""} Icon={HiDotsVertical} />
+            {toggle && (
+              <div className="absolute mt-3 bg-[#121212] border-[1px] border-gray-700 px-5 py-4 p-3">
+                {menu.map(
+                  (item, index) =>
+                    index > 2 && (
+                      <HeaderItems
+                        key={item.name}
+                        name={item.name}
+                        Icon={item.icon}
+                      />
+                    )
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
