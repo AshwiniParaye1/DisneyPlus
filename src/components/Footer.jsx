@@ -8,11 +8,8 @@ import AppStoreImg from "../assets/images/footerImages/appstore.webp";
 function Footer() {
   return (
     <div className="text-white p-5 px-8 md:px-16 mt-[96px]">
-      <div
-        className="flex
-        justify-between mb-12"
-      >
-        <div>
+      <div className="flex flex-col md:flex-row justify-between mb-6 md:mb-12">
+        <div className="mb-8 md:mb-0">
           <h4 className="text-sm font-medium mb-3">Company</h4>
           <ul className="space-y-1 text-xs">
             <li>
@@ -37,7 +34,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mb-8 md:mb-0">
           <h4 className="text-sm font-medium mb-3">View Website in</h4>
           <ul className="space-y-1 text-xs">
             <li className="flex items-center">
@@ -53,7 +50,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mb-8 md:mb-0">
           <h4 className="text-sm font-medium mb-3">Need Help?</h4>
           <ul className="space-y-1 text-xs">
             <li>
@@ -78,7 +75,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mb-8 md:mb-0">
           <h4 className="text-sm font-medium mb-3">Connect with Us</h4>
           <ul className="space-y-1 text-xs flex">
             <li className="mr-6 flex items-center">
@@ -105,8 +102,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footerBottom flex justify-between">
-        <div className=" text-sm text-gray-400">
+      <div className="footerBottom flex flex-col md:flex-row justify-between">
+        <div className=" text-sm text-gray-400 mb-8 md:mb-0">
           <p className="mb-2">&copy; 2024 STAR. All rights reserved.</p>
           <p>
             <a
@@ -135,12 +132,12 @@ function Footer() {
             </a>
           </p>
         </div>
-        <div className="FooterImages flex flex-row">
+        <div className="FooterImages flex flex-col md:flex-row items-center">
           <a
             href="https://play.google.com/store/apps/details?id=in.startv.hotstar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-400"
+            className="text-gray-400 hover:text-gray-400 mb-4 md:mb-0"
           >
             <img
               src={GooglePlayImg}
