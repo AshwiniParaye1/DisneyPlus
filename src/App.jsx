@@ -3,6 +3,7 @@ import Slider from "./components/Slider";
 import "./App.css";
 import ProductionHouse from "./components/ProductionHouse";
 import GenreMovieList from "./components/GenreMovieList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Slider />
       <ProductionHouse />
       <GenreMovieList />
+      <Footer />
     </div>
   );
 }
