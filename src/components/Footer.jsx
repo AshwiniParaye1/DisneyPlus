@@ -37,16 +37,9 @@ function Footer() {
         <div className="mb-8 md:mb-0">
           <h4 className="text-sm font-medium mb-3">View Website in</h4>
           <ul className="space-y-1 text-xs">
-            <li className="flex items-center">
+            <li className="flex items-center text-gray-400">
               <IoCheckmark className="mr-2" size={20} />
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-400"
-              >
-                English
-              </a>
+              <p>English</p>
             </li>
           </ul>
         </div>
