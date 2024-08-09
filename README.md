@@ -2,7 +2,7 @@
 
 ## Overview
 
-A React application that allows users to explore trending movies and genres. The app features an interactive movie slider, genre-based movie lists, and a showcase of various production houses with video previews.
+Welcome to the Disney+Hotstar app! 🎬✨ This React application lets you dive into the world of movies with ease. Explore trending films, discover new genres, and enjoy interactive showcases of various production houses with captivating video previews.
 
 ## Features
 
@@ -53,3 +53,9 @@ npm run dev
 
 - **Trending Movies:** `GET https://api.themoviedb.org/3/trending/all/day?api_key=YOUR_API_KEY`
 - **Movies by Genre:** `GET https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=GENRE_ID`
+
+### Thank you for checking out Disney+Hotstar! If you have any questions or feedback, feel free to reach out.
+
+<b>{{https://www.linkedin.com/in/ashwini-paraye/}}</b>
+
+Happy Coding 🚀
