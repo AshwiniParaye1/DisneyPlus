@@ -6,11 +6,9 @@ function MovieList({ genreId }) {
     getMovieByGenreId();
   }, []);
 
-  const getMovieByGenreId = () => {
-    console.log(genreId);
-    GlobalApi.getMovieByGenreId(genreId).then((resp) => {
-      console.log(resp.data.results);
-    });
+  const getMovieByGenreId = async () => {
+    const response = await GlobalApi.getMovieByGenreId(genreId);
+    console.log(response.data.results);
   };
 
   return <div>MovieList</div>;
