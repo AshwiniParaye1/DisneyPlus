@@ -31,7 +31,7 @@ function MovieList({ genreId, index_ }) {
       <IoChevronBackOutline
         onClick={() => slideLeft(elementRef.current)}
         className={`text-[50px] text-white p-2 z-10 cursor-pointer hidden md:block absolute ${
-          index_ % 3 === 0 ? "mt-[70px]" : " mt-[150px]"
+          index_ % 3 === 0 ? "mt-[70px]" : "mt-[150px]"
         }`}
       />
 
@@ -39,15 +39,13 @@ function MovieList({ genreId, index_ }) {
         ref={elementRef}
         className="flex overflow-x-auto gap-8 scrollbar-hide pt-5 px-3 pb-5 transition-all duration-150 ease-in cursor-pointer scroll-smooth"
       >
-        {movieList.map((item, index) => (
-          <>
-            {index_ % 3 === 0 ? (
-              <HrMovieCard key={item.id} movie={item} />
-            ) : (
-              <MovieCard key={item.id} movie={item} index_={index} />
-            )}
-          </>
-        ))}
+        {movieList.map((item, index) =>
+          index_ % 3 === 0 ? (
+            <HrMovieCard key={item.id} movie={item} />
+          ) : (
+            <MovieCard key={item.id} movie={item} index_={index} />
+          )
+        )}
       </div>
 
       <IoChevronForwardOutline
@@ -55,7 +53,7 @@ function MovieList({ genreId, index_ }) {
         className={`text-[50px] text-white hidden md:block
            p-2 cursor-pointer z-10 top-0
             absolute right-0 
-            ${index_ % 3 == 0 ? "mt-[70px]" : "mt-[150px]"}`}
+            ${index_ % 3 === 0 ? "mt-[70px]" : "mt-[150px]"}`}
       />
     </div>
   );
