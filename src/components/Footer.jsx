@@ -132,7 +132,7 @@ function Footer() {
             </a>
           </p>
         </div>
-        <div className="FooterImages flex flex-col md:flex-row items-center">
+        <div className="FooterImages flex flex-row">
           <a
             href="https://play.google.com/store/apps/details?id=in.startv.hotstar"
             target="_blank"
