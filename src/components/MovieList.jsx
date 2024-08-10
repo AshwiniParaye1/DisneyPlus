@@ -10,6 +10,8 @@ function MovieList({ genreId, index_ }) {
   const elementRef = useRef();
 
   useEffect(() => {
+    console.log(getMovieByGenreId());
+
     getMovieByGenreId();
   }, []);
 
